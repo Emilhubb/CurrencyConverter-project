@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <div class="container">
+        <button class="menu-toggle">☰</button>
+        <div class="img">
+          <img src="Frame.svg" />
+        </div>
+        <div id="list">
+          <ul class="lists">
+            <li><a href="#">БАНК</a></li>
+            <li><a href="#">БИЗНЕС</a></li>
+            <li><a href="#">ИНВЕСТИЦИИ</a></li>
+            <li><a href="#">СТРАХОВАНИЕ</a></li>
+            <li><a href="#">МОБАЙЛ</a></li>
+            <li><a href="#">ПУТЕШЕСТВИЯ</a></li>
+            <li><a href="#">РАЗВЛЕЧЕНИЯ</a></li>
+          </ul>
+        </div>
+        <button>ВОЙТИ</button>
+      </div>
+    </nav>
+    <main>
+      <div class="main">
+        <h1 class="title">Конвертер валют онлайн</h1>
+
+        <div class="box">
+          <div class="box1">
+            <p>У меня есть</p>
+            <button class="cur-button activeButton">RUB</button>
+            <button class="cur-button">USD</button>
+            <button class="cur-button">EUR</button>
+            <button class="cur-button">GBP</button> <br />
+            <input type="text" class="cur-input-1" placeholder="0.00" min="0" />
+            <div class="change-box">
+              <span class="change-btn"><i class="fas fa-retweet"></i></span>
+              <p id="leftratebox" class="rate-box">0.00</p>
+            </div>
+          </div>
+          <div class="box2">
+            <p>Хочу приобрести</p>
+            <button class="cur-button">RUB</button>
+            <button class="cur-button activeButton">USD</button>
+            <button class="cur-button">EUR</button>
+            <button class="cur-button">GBP</button> <br />
+            <input type="text" class="cur-input-2" placeholder="0.00" min="0" />
+            <div class="change-box">
+              <span class="change-btn"><i class="fas fa-retweet"></i></span>
+              <p id="rightratebox" class="rate-box">0.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="connection-status">Нет подключения к интернету</div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+#navbar {
+  width: 100%;
+  background-color: #f5f5f6;
+}
+#navbar .container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+  padding-bottom: 5px;
+  justify-content: center;
+}
+
+.menu-toggle {
+  display: none;
+}
+ul li a {
+  padding: 0px 25px;
+  color: #959ba4;
+}
+a {
+  text-decoration: none;
+}
+ul li a:hover {
+  color: black;
+}
+ul li:first-child a {
+  color: black;
+}
+#navbar button {
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.main h1 {
+  padding-top: 100px;
+  padding-left: 450px;
+}
+
+.box {
+  padding-left: 260px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  color: #959ba4;
+}
+.box2 {
+  margin-right: 100px;
+}
+.box button {
+  background-color: white;
+  border: 1px solid #959ba4;
+  color: #959ba4;
+  margin-right: -6px;
+  font-size: 18px;
+  padding: 10px 30px;
+  border-radius: 3px;
+}
+.activeButton {
+  background-color: #833ae0 !important;
+  color: white !important;
+}
+input {
+  margin-top: 30px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  width: 370px;
+  padding: 15px 0px 100px 20px;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.change-box {
+  width: 100%;
+  display: grid;
+  color: #ddd;
+  margin-top: -50px;
+}
+.change-box p {
+  margin-left: 20px;
+  font-size: 18px;
+}
+.fa-retweet {
+  font-size: 1.6em;
+  transition: 0.4s;
+  cursor: pointer;
+}
+#connection-status {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  z-index: 9999;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+#connection-status.online {
+  background-color: #4caf50; 
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media screen and (min-width: 992px) and (max-width: 1315px) {
+  .main h1 {
+    font-size: 40px;
+    padding-left: 250px;
+  }
+
+  .box {
+    padding-left: 100px;
+    display: flex;
+    justify-content: space-around;
+    color: #959ba4;
+    flex-wrap: wrap;
+  }
+  #list {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 210px) and (max-width: 991px) {
+  #navbar {
+    width: 100%; /* Instead of fixed 991px */
+    max-width: 991px;
+    margin: 0 auto;
+  }
+  .img {
+    padding-left: 20vw;
+  }
+  .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    margin: 100px auto 0 auto; /* Adds top margin instead of shifting with 'top' */
+  }
+  .main .title {
+    padding: 0;
+    font-size: 36px;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+
+  .box {
+    padding-left: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+  .box button {
+    width: 25%;
+    font-size: 16px;
+  }
+  .box2 {
+    margin: 0;
+  }
+
+  .error {
+    width: 65%;
+  }
+  .card-main {
+    width: 100%;
+  }
+  .cur-input-1,
+  .cur-input-2 {
+    width: 100%;
+    font-size: 40px;
+  }
+
+  .lists {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    z-index: 999;
+
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  .lists.show {
+    display: flex;
+  }
+}
