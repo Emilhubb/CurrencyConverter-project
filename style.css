@@ -152,7 +152,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 @media screen and (min-width: 210px) and (max-width: 991px) {
   #navbar {
-    width: 100%; /* Instead of fixed 991px */
+    width: 100%;
     max-width: 991px;
     margin: 0 auto;
   }
@@ -170,7 +170,7 @@ input[type="number"]::-webkit-outer-spin-button {
     left: 0;
     right: 0;
     padding: 0 20px;
-    margin: 100px auto 0 auto; /* Adds top margin instead of shifting with 'top' */
+    margin: 50px auto 0 auto;
   }
   .main .title {
     padding: 0;
@@ -211,6 +211,7 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: column;
     position: absolute;
     top: 60px;
+    padding-top: 5px;
     left: 0;
     right: 0;
     width: 100%;

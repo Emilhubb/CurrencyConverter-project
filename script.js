@@ -35,7 +35,7 @@ window.addEventListener("online", () => {
   connectionStatus.textContent = "Интернет подключен";
   connectionStatus.classList.add("online");
   connectionStatus.style.display = "block";
-  
+
   setTimeout(() => {
     connectionStatus.style.display = "none";
   }, 2000);
@@ -96,7 +96,6 @@ const fetchRate = async (leftCurrency, rightCurrency) => {
 };
 
 const calculateResult = (inputVal, rate) => {
-  console.log(inputVal);
   return inputVal * rate;
 };
 
@@ -217,14 +216,24 @@ rightButtons.forEach((button) => {
   });
 });
 const handleInput = (input) => {
-  console.log(input.value);
   let val = input.value;
 
   val = val.replace(/,/g, ".");
 
+  let hasE = false;
+
   let cleaned = val
     .split("")
-    .filter((char) => (char >= "0" && char <= "9") || char === ".")
+    .filter((char, index) => {
+      if (char >= "0" && char <= "9") return true;
+      if (char === ".") return true;
+      if (char === "e") {
+        if (hasE) return false;
+        hasE = true;
+        return index > 0 && val[index - 1] >= "0" && val[index - 1] <= "9";
+      }
+      return false;
+    })
     .join("");
 
   if (cleaned.includes(".")) {
@@ -265,7 +274,11 @@ const handleInput = (input) => {
     input.value = cleaned;
     return;
   }
-  if (cleaned.startsWith("0") && !cleaned.startsWith("0.") && cleaned.length > 1) {
+  if (
+    cleaned.startsWith("0") &&
+    !cleaned.startsWith("0.") &&
+    cleaned.length > 1
+  ) {
     if (cleaned[1] >= "1" && cleaned[1] <= "9") {
       cleaned = "0." + cleaned.slice(1);
     } else {
