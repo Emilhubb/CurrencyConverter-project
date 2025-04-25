@@ -55,7 +55,8 @@ ul li:first-child a {
   cursor: pointer;
 }
 
-.main h1 {
+.main h1 {  
+  font-size: 35px;
   padding-top: 100px;
   padding-left: 450px;
 }
@@ -166,7 +167,7 @@ input[type="number"]::-webkit-outer-spin-button {
     align-items: center;
     justify-content: center;
     position: relative;
-    top: 20px;
+    top: 30px;
     left: 0;
     right: 0;
     padding: 0 20px;
@@ -174,8 +175,10 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .main .title {
     padding: 0;
-    font-size: 36px;
-    padding-bottom: 100px;
+    position: relative;
+    top: -30px;
+    font-size: 28px;
+    padding-bottom: 15px;
     text-align: center;
   }
 
@@ -184,7 +187,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-top: 0;
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 65px;
   }
   .box button {
     width: 25%;
