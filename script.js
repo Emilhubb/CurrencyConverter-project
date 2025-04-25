@@ -193,11 +193,7 @@ leftButtons.forEach((button) => {
     if (selectedBaseCurrency !== button.textContent) {
       selectedBaseCurrency = button.textContent;
       setActiveButton();
-      if (BaseToTarget) {
-        convertFirstInput();
-      } else {
-        convertSecondInput();
-      }
+      BaseToTarget ? convertFirstInput() : convertSecondInput();
     }
   });
 });
@@ -207,11 +203,7 @@ rightButtons.forEach((button) => {
     if (selectedTargetCurrency !== button.textContent) {
       selectedTargetCurrency = button.textContent;
       setActiveButton();
-      if (BaseToTarget === false) {
-        convertSecondInput();
-      } else {
-        convertFirstInput();
-      }
+      BaseToTarget ? convertFirstInput() : convertSecondInput();
     }
   });
 });
